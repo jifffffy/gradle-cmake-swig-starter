@@ -9,11 +9,11 @@
  * std::runtime_error in case of a execute failure
 */
 %define EXECUTE_EXCEPTION(function)
-%javaexception("java.io.IOException") function {
+%javaexception("java.lang.Exception") function {
   try {
      $action
   } catch (std::runtime_error &e) {
-    jclass clazz = jenv->FindClass("java/io/IOException");
+    jclass clazz = jenv->FindClass("java/lang/Exception");
     jenv->ThrowNew(clazz, e.what());
     return $null;
    }

@@ -1,0 +1,2 @@
+---
+Gradle Cmake Swig Starter

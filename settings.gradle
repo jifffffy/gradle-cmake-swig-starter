@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'gradle-cmake-swig-starter'
-include('lib')
+include('example')
