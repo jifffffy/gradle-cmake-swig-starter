@@ -1521,9 +1521,75 @@ SWIGEXPORT void JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_delet
   {
     try {
       delete arg1;
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return ; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return ; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return ;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return ; 
+      };
     }
   }
 }
@@ -1539,9 +1605,75 @@ SWIGEXPORT void JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_Callb
   {
     try {
       (arg1)->run();
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return ; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return ; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return ;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return ; 
+      };
     }
   }
 }
@@ -1557,9 +1689,75 @@ SWIGEXPORT void JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_Callb
   {
     try {
       (arg1)->Callback::run();
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return ; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return ; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return ;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return ; 
+      };
     }
   }
 }
@@ -1574,9 +1772,75 @@ SWIGEXPORT jlong JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_new_
   {
     try {
       result = (Callback *)new SwigDirector_Callback(jenv);
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return 0; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return 0; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return 0;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return 0; 
+      };
     }
   }
   *(Callback **)&jresult = result; 
@@ -1611,9 +1875,75 @@ SWIGEXPORT jlong JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_new_
   {
     try {
       result = (Caller *)new Caller();
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return 0; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return 0; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return 0; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return 0;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return 0; 
+      };
     }
   }
   *(Caller **)&jresult = result; 
@@ -1630,9 +1960,75 @@ SWIGEXPORT void JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_delet
   {
     try {
       delete arg1;
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return ; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return ; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return ;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return ; 
+      };
     }
   }
 }
@@ -1648,9 +2044,75 @@ SWIGEXPORT void JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_Calle
   {
     try {
       (arg1)->delCallback();
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return ; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return ; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return ;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return ; 
+      };
     }
   }
 }
@@ -1669,9 +2131,75 @@ SWIGEXPORT void JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_Calle
   {
     try {
       (arg1)->setCallback(arg2);
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return ; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return ; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return ;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return ; 
+      };
     }
   }
 }
@@ -1687,9 +2215,75 @@ SWIGEXPORT void JNICALL Java_io_jiffy_gradle_cmake_swig_starter_exampleJNI_Calle
   {
     try {
       (arg1)->call();
+    } catch (std::invalid_argument& e) {
+      std::string s1("Invalid Argument: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::domain_error& e) {
+      std::string s1("Domain Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_ValueError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::overflow_error& e) {
+      std::string s1("Overflow Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_OverflowError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::out_of_range& e) {
+      std::string s1("Out of Range: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::length_error& e) {
+      std::string s1("Length Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_IndexError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::logic_error& e) {
+      std::string s1("Logic Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::bad_alloc& e) {
+      /* for an allocation exception, don't try to create a string... */
+      {
+        SWIG_JavaException(jenv, SWIG_MemoryError, e.what()); return ; 
+      };
+      
+    } catch (std::runtime_error& e) {
+      /* catch other std::runtime_error exceptions here */
+      std::string s1("Runtime Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_RuntimeError, s1.c_str()); return ; 
+      };
+      
+    } catch (std::exception& e) {
+      /* catch other std::exceptions here */
+      std::string s1("Error: "), s2(e.what());
+      s1 = s1 + s2;
+      {
+        SWIG_JavaException(jenv, SWIG_SystemError, s1.c_str()); return ; 
+      };
+      
     } catch (...) {
-      SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-      return ;
+      /* catch everything else */
+      {
+        SWIG_JavaException(jenv, SWIG_UnknownError, "Unknown exception"); return ; 
+      };
     }
   }
 }

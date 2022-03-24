@@ -32,13 +32,5 @@ import org.scijava.nativelib.NativeLoader;
   }
 %}
 
-%exception {
-    try {
-        $action
-    } catch (...) {
-        SWIG_JavaThrowException(jenv, SWIG_JavaRuntimeException, "Unknown exception type");
-        return $null;
-    }
-}
 
 %include "../cpp/example.h"
